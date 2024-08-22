@@ -16,6 +16,8 @@ import {
     DropdownMenuSeparator
 } from '@/components/ui/dropdown-menu'
 
+import { Github, Twitter, Mail, MoveLeft } from 'lucide-react'
+
 function App() {
     return (
         <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
@@ -40,19 +42,46 @@ function App() {
                                 <DropdownMenuSeparator />
                                 <DropdownMenuGroup>
                                     <DropdownMenuItem>
-                                        <span>GitHub</span>
-                                        <DropdownMenuShortcut>github.com</DropdownMenuShortcut>
+                                        <a
+                                            href="https://discord.com/users/528791966503403541"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex items-center w-full"
+                                        >
+                                            <span className="mr-2">Discord</span>
+                                            <DropdownMenuShortcut>toothyjarl</DropdownMenuShortcut>
+                                        </a>
                                     </DropdownMenuItem>
                                     <DropdownMenuItem>
-                                        <span>Twitter</span>
-                                        <DropdownMenuShortcut>twitter.com</DropdownMenuShortcut>
+                                        <a
+                                            href="https://github.com/ToothyJarl"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex items-center w-full"
+                                        >
+                                            <Github className="mr-2 h-4 w-4" />
+                                            <span className="mr-2">GitHub</span>
+                                        </a>
                                     </DropdownMenuItem>
                                     <DropdownMenuItem>
-                                        <span>Discord</span>
-                                        <DropdownMenuShortcut>discord.com</DropdownMenuShortcut>
+                                        <a
+                                            href="https://twitter.com/ToothyJarl"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex items-center w-full"
+                                        >
+                                            <Twitter className="mr-2 h-4 w-4" />
+                                            <span className="mr-2">Twitter</span>
+                                        </a>
                                     </DropdownMenuItem>
                                     <DropdownMenuItem>
-                                        <span>Email</span>
+                                        <a
+                                            href="mailto:aidanhgill@gmail.com"
+                                            className="flex items-center w-full"
+                                        >
+                                            <Mail className="mr-2 h-4 w-4" />
+                                            <span className="mr-2">Email</span>
+                                        </a>
                                     </DropdownMenuItem>
                                 </DropdownMenuGroup>
                             </DropdownMenuContent>
@@ -67,8 +96,9 @@ function App() {
                                 with frontend development. My journey into programming began as a
                                 kid, and I’ve been passionate about it ever since.
                             </p>
-                            <p className="mt-2 text-xl opacity-40">
-                                --- Click on my profile to view links and socials.
+                            <p className="mt-2 text-xl opacity-40 flex items-center">
+                                <MoveLeft className="mr-2" />
+                                Click on my profile to view my socials and other links.
                             </p>
                         </div>
                     </div>
