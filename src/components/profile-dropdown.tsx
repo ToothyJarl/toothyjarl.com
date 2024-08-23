@@ -15,14 +15,14 @@ interface ProfileDropdownProps {
 }
 
 function ProfileDropdown({ children }: ProfileDropdownProps) {
-    const [side, setSide] = useState<'right' | 'top'>('right')
+    const [side, setSide] = useState<'left' | 'top'>('left')
 
     useEffect(() => {
         function handleResize() {
             if (window.innerWidth < 640) {
                 setSide('top')
             } else {
-                setSide('right')
+                setSide('left')
             }
         }
 
@@ -36,7 +36,7 @@ function ProfileDropdown({ children }: ProfileDropdownProps) {
     return (
         <DropdownMenu>
             <DropdownMenuTrigger asChild>{children}</DropdownMenuTrigger>
-            <DropdownMenuContent side={side} sideOffset={10} className="w-56">
+            <DropdownMenuContent side={side} sideOffset={15} className="w-56">
                 <DropdownMenuGroup>
                     <DropdownMenuItem>
                         <a

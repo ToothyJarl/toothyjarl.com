@@ -4,12 +4,25 @@ body {
     height: 100%;
 }
 
-#profile,
-img[data-state='open'] {
+#profile {
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 #profile:hover,
 img[data-state='open']:hover {
     transform: scale(0.95);
+}
+
+@keyframes diagonal-move {
+    0%,
+    100% {
+        transform: translateY(-50%) translateX(0%);
+    }
+    50% {
+        transform: translateY(-60%) translateX(10%);
+    }
+}
+
+.animate-diagonal-move {
+    animation: diagonal-move 1.5s ease-in-out infinite;
 }

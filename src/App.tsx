@@ -1,13 +1,16 @@
 import '@/App.css'
+
 import { ThemeProvider } from '@/components/theme-provider'
 import ProfileDropdown from '@/components/profile-dropdown'
-import profile from '@/assets/images/toothyjarl.jpg'
-
 import DotPattern from './components/magicui/dot-pattern'
 import Particles from '@/components/magicui/particles'
 import BlurFade from './components/magicui/blur-fade'
 
+import profile from '@/assets/images/toothyjarl.jpg'
+
 import { cn } from '@/lib/utils'
+
+import { MoveDownLeft } from 'lucide-react'
 
 function App() {
     return (
@@ -16,12 +19,12 @@ function App() {
                 <div className="flex flex-col justify-center items-center flex-grow">
                     <DotPattern
                         className={cn(
-                            '[mask-image:radial-gradient(300px_circle_at_center,white,transparent)]'
+                            'opacity-50 [mask-image:radial-gradient(300px_circle_at_center,white,transparent)]'
                         )}
                     />
                     <Particles
                         className="absolute inset-0"
-                        quantity={20}
+                        quantity={50}
                         ease={80}
                         color="#ffffff"
                         refresh
@@ -36,6 +39,16 @@ function App() {
                                     className="w-full h-full rounded-full object-cover cursor-pointer ease-in-out"
                                 />
                             </ProfileDropdown>
+                            <MoveDownLeft
+                                className="absolute text-gray-600 animate-diagonal-move"
+                                style={{
+                                    top: '30%',
+                                    right: '-45px',
+                                    transform: 'translateY(-50%)',
+                                    width: '2rem',
+                                    height: '2rem'
+                                }}
+                            />
                         </div>
                     </BlurFade>
                     <BlurFade delay={0.3}>
@@ -50,8 +63,13 @@ function App() {
                             I’ve been passionate about it ever since.
                         </p>
                     </BlurFade>
+                    <BlurFade delay={0.7}>
+                        <p className="text-gray-500 lg:text-lg text-sm text-center mt-4">
+                            Tap on my profile to view my socials and other links.
+                        </p>
+                    </BlurFade>
                 </div>
-                <footer className="text-gray-500 text-md text-center mt-4">
+                <footer className="text-gray-500 lg:text-md text-sm text-center mt-4">
                     <p>&copy; {new Date().getFullYear()} ToothyJarl. All rights reserved.</p>
                 </footer>
             </div>
