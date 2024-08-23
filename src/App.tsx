@@ -80,7 +80,7 @@ function App() {
                                             className="flex items-center w-full"
                                         >
                                             <Mail className="mr-2 h-4 w-4" />
-                                            <span className="mr-2">Email</span>
+                                            <span className="mr-2">Contact</span>
                                         </a>
                                     </DropdownMenuItem>
                                 </DropdownMenuGroup>
