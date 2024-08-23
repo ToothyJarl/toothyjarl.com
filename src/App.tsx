@@ -92,9 +92,9 @@ function App() {
                         <div className="text-left text-white w-full">
                             <h1 className="text-3xl font-semibold">Hi there! I'm ToothyJarl,</h1>
                             <p className="mt-2 text-xl opacity-80">
-                                a young and aspiring software developer with a tendency to dabble
-                                with frontend development. My journey into programming began as a
-                                kid, and I’ve been passionate about it ever since.
+                                a young and aspiring software developer with a tendency to mess with
+                                frontend development. My journey into programming began as a kid,
+                                and I’ve been passionate about it ever since.
                             </p>
                             <p className="mt-2 text-xl opacity-40 flex items-center">
                                 <MoveLeft className="mr-2" />
