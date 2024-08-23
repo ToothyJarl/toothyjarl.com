@@ -1,4 +1,4 @@
-import { ReactNode } from 'react'
+import { ReactNode, useState, useEffect } from 'react'
 
 import {
     DropdownMenu,
@@ -15,10 +15,28 @@ interface ProfileDropdownProps {
 }
 
 function ProfileDropdown({ children }: ProfileDropdownProps) {
+    const [side, setSide] = useState<'right' | 'top'>('right')
+
+    useEffect(() => {
+        function handleResize() {
+            if (window.innerWidth < 640) {
+                setSide('top')
+            } else {
+                setSide('right')
+            }
+        }
+
+        window.addEventListener('resize', handleResize)
+
+        handleResize()
+
+        return () => window.removeEventListener('resize', handleResize)
+    }, [])
+
     return (
         <DropdownMenu>
             <DropdownMenuTrigger asChild>{children}</DropdownMenuTrigger>
-            <DropdownMenuContent side="top" sideOffset={10} className="w-56">
+            <DropdownMenuContent side={side} sideOffset={10} className="w-56">
                 <DropdownMenuGroup>
                     <DropdownMenuItem>
                         <a

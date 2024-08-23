@@ -4,8 +4,12 @@ body {
     height: 100%;
 }
 
-img:hover,
+#profile,
 img[data-state='open'] {
-    transform: scale(0.98);
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#profile:hover,
+img[data-state='open']:hover {
+    transform: scale(0.95);
 }
