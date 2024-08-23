@@ -1,0 +1,11 @@
+html,
+body {
+    overflow: hidden;
+    height: 100%;
+}
+
+img:hover,
+img[data-state='open'] {
+    transform: scale(0.98);
+    transition: transform 0.3s ease-in-out;
+}
