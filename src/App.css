@@ -9,7 +9,7 @@ body {
 }
 
 #profile:hover,
-img[data-state='open']:hover {
+img[data-state='open'] {
     transform: scale(0.95);
 }
 
