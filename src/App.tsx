@@ -11,6 +11,7 @@ import profile from '@/assets/images/toothyjarl.jpg'
 import { cn } from '@/lib/utils'
 
 import { MoveDownLeft } from 'lucide-react'
+import Projects from './components/projects'
 
 function App() {
     return (
