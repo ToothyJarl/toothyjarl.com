@@ -53,7 +53,7 @@ function App() {
                     </BlurFade>
                     <BlurFade delay={0.3}>
                         <h1 className="text-white text-2xl lg:text-3xl font-bold text-center mb-2">
-                            Hi there! I'm ToothyJarl,
+                            Hi! I'm ToothyJarl,
                         </h1>
                     </BlurFade>
                     <BlurFade delay={0.5}>
