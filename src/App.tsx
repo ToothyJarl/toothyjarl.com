@@ -65,7 +65,7 @@ function App() {
                     </BlurFade>
                     <BlurFade delay={0.7}>
                         <p className="text-gray-500 lg:text-lg text-sm text-center mt-4">
-                            Tap on my profile to view my socials and other links.
+                            Tap my profile for socials and links.
                         </p>
                     </BlurFade>
                 </div>
