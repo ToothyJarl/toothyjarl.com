@@ -10,12 +10,12 @@ import profile from '@/assets/images/toothyjarl.jpg'
 
 import { cn } from '@/lib/utils'
 
-import { MoveDownLeft } from 'lucide-react'
+import { MoveDownLeft, Github } from 'lucide-react'
 
 function App() {
     return (
         <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-            <div className="flex flex-col min-h-screen px-6 py-8">
+            <div className="font-geist flex flex-col min-h-screen px-6 py-8">
                 <div className="flex flex-col justify-center items-center flex-grow">
                     <DotPattern
                         className={cn(
@@ -23,7 +23,7 @@ function App() {
                         )}
                     />
                     <Particles
-                        className="absolute inset-0"
+                        className="absolute inset-0 z-0"
                         quantity={50}
                         ease={80}
                         color="#ffffff"
@@ -69,8 +69,18 @@ function App() {
                         </p>
                     </BlurFade>
                 </div>
-                <footer className="text-gray-500 lg:text-md text-sm text-center mt-4">
-                    <p>&copy; {new Date().getFullYear()} ToothyJarl. All rights reserved.</p>
+                <footer className="text-gray-500 text-md text-center mt-4 z-10">
+                    <div className="flex flex-col items-center">
+                        <a
+                            href="https://github.com/ToothyJarl/toothyjarl.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:text-gray-300"
+                        >
+                            <Github className="mb-2 h-7 w-7 transition-color duration-100" />
+                        </a>
+                        <p>&copy; {new Date().getFullYear()} ToothyJarl. All rights reserved.</p>
+                    </div>
                 </footer>
             </div>
         </ThemeProvider>
