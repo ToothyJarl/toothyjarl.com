@@ -60,7 +60,7 @@ function App() {
                         <p className="text-gray-400 text-center text-md lg:text-xl max-w-lg mx-auto">
                             a young and aspiring software developer with a tendency to mess with
                             frontend development. My journey into programming began as a kid, and
-                            I’ve been passionate about it ever since.
+                            I’ve loved it ever since.
                         </p>
                     </BlurFade>
                     <BlurFade delay={0.7}>
