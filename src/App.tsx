@@ -69,7 +69,7 @@ function App() {
                         </p>
                     </BlurFade>
                 </div>
-                <footer className="text-gray-500 lg:text-md text-sm text-center mt-4">
+                <footer className="text-gray-500 text-md text-center mt-4">
                     <p>&copy; {new Date().getFullYear()} ToothyJarl. All rights reserved.</p>
                 </footer>
             </div>
