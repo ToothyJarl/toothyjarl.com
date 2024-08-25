@@ -1,3 +1,3 @@
 # React + TypeScript + Vite
 
-toothyjarl.com
+https://toothyjarl.com
