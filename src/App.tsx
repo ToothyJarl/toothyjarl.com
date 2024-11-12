@@ -1,10 +1,8 @@
 import { useEffect, useState } from 'react'
-//import '@/App.css'
-
 import profileImage from '@/assets/profile.jpg'
 import { useTheme } from '@/components/theme-provider'
 import { Button } from '@/components/ui/button'
-import { Github, Linkedin, Moon, Sun, Twitter } from 'lucide-react'
+import { Github, Mail, Moon, MoveRight, Sun, Twitter } from 'lucide-react'
 import Particles from '@/components/ui/particles'
 
 function App() {
@@ -31,8 +29,12 @@ function App() {
                 </div>
 
                 <section className="w-full lg:w-1/2 flex flex-col items-center lg:items-start">
-                    <h1 className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-5xl sm:text-5xl md:text-6xl lg:text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10 text-center lg:text-left">
-                        ToothyJarl
+                    <p className="hidden lg:block text-left text-muted-foreground">
+                        /ˈtuːθiːˈjɑːrl/
+                    </p>
+
+                    <h1 className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-5xl sm:text-5xl md:text-6xl lg:text-8xl font-semibold leading-[1.2] text-transparent dark:from-white dark:to-slate-900/10 text-center lg:text-left pb-2">
+                        toothyjarl
                     </h1>
 
                     <p className="text-lg mt-4 text-center lg:text-left">
@@ -53,12 +55,6 @@ function App() {
                                 <span className="sr-only">GitHub</span>
                             </Button>
                         </a>
-                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-                            <Button variant="outline" size="icon">
-                                <Linkedin className="h-8 w-8" />
-                                <span className="sr-only">LinkedIn</span>
-                            </Button>
-                        </a>
                         <a
                             href="https://twitter.com/ToothyJarl"
                             target="_blank"
@@ -67,6 +63,18 @@ function App() {
                             <Button variant="outline" size="icon">
                                 <Twitter className="h-8 w-8" />
                                 <span className="sr-only">Twitter</span>
+                            </Button>
+                        </a>
+                        <a href="mailto:aidanhgill@gmail.com" rel="noopener noreferrer">
+                            <Button variant="outline" size="icon">
+                                <Mail className="h-8 w-8" />
+                                <span className="sr-only">Contact</span>
+                            </Button>
+                        </a>
+                        <a rel="noopener noreferrer">
+                            <Button className="group">
+                                Portfolio
+                                <MoveRight className="h-4 w-4 transform transition-transform duration-200 group-hover:translate-x-1" />
                             </Button>
                         </a>
                     </div>
