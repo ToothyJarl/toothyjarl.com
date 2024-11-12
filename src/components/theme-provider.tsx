@@ -33,25 +33,36 @@ export function ThemeProvider({
     useEffect(() => {
         const root = window.document.documentElement
 
-        root.classList.remove('light', 'dark')
-
-        if (theme === 'system') {
-            const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches
-                ? 'dark'
-                : 'light'
-
-            root.classList.add(systemTheme)
-            return
+        const applyTheme = (currentTheme: Theme) => {
+            root.classList.remove('light', 'dark')
+            if (currentTheme === 'system') {
+                const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches
+                    ? 'dark'
+                    : 'light'
+                root.classList.add(systemTheme)
+            } else {
+                root.classList.add(currentTheme)
+            }
         }
 
-        root.classList.add(theme)
+        applyTheme(theme)
+
+        if (theme === 'system') {
+            const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
+            const handleSystemThemeChange = () => applyTheme('system')
+            mediaQuery.addEventListener('change', handleSystemThemeChange)
+
+            return () => {
+                mediaQuery.removeEventListener('change', handleSystemThemeChange)
+            }
+        }
     }, [theme])
 
     const value = {
         theme,
-        setTheme: (theme: Theme) => {
-            localStorage.setItem(storageKey, theme)
-            setTheme(theme)
+        setTheme: (newTheme: Theme) => {
+            localStorage.setItem(storageKey, newTheme)
+            setTheme(newTheme)
         },
     }
 
@@ -64,8 +75,6 @@ export function ThemeProvider({
 
 export const useTheme = () => {
     const context = useContext(ThemeProviderContext)
-
     if (context === undefined) throw new Error('useTheme must be used within a ThemeProvider')
-
     return context
 }

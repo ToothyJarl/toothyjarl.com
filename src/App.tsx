@@ -1,13 +1,26 @@
 import { useEffect, useState } from 'react'
-import profileImage from '@/assets/profile.jpg'
-import { useTheme } from '@/components/theme-provider'
+import { ThemeProvider, useTheme } from '@/components/theme-provider'
 import { Button } from '@/components/ui/button'
 import { Github, Mail, Moon, MoveRight, Sun, Twitter } from 'lucide-react'
 import Particles from '@/components/ui/particles'
+import profileImage from '@/assets/profile.jpg'
 
 function App() {
+    return (
+        <ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">
+            <AppContent />
+        </ThemeProvider>
+    )
+}
+
+function AppContent() {
     const { theme, setTheme } = useTheme()
+    const [mounted, setMounted] = useState(false)
     const [color, setColor] = useState('#ffffff')
+
+    useEffect(() => {
+        setMounted(true)
+    }, [])
 
     useEffect(() => {
         setColor(theme === 'dark' ? '#ffffff' : '#000000')
@@ -15,6 +28,10 @@ function App() {
 
     const handleThemeToggle = () => {
         setTheme(theme === 'dark' ? 'light' : 'dark')
+    }
+
+    if (!mounted) {
+        return null
     }
 
     return (
@@ -74,7 +91,7 @@ function App() {
                         <a rel="noopener noreferrer">
                             <Button className="group">
                                 Portfolio
-                                <MoveRight className="h-4 w-4 transform transition-transform duration-200 group-hover:translate-x-1" />
+                                <MoveRight className="h-4 w-4 transform transition-transform duration-200 group-hover:translate-x-0.5" />
                             </Button>
                         </a>
                     </div>
