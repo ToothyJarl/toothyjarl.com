@@ -46,7 +46,7 @@ function AppContent() {
                 </div>
 
                 <section className="w-full lg:w-1/2 flex flex-col items-center lg:items-start">
-                    <p className="hidden lg:block text-left text-muted-foreground">
+                    <p className="pointer-events-none hidden lg:block text-left text-muted-foreground">
                         /ˈtuːθiːˈjɑːrl/
                     </p>
 
@@ -54,7 +54,7 @@ function AppContent() {
                         toothyjarl
                     </h1>
 
-                    <p className="text-lg mt-4 text-center lg:text-left">
+                    <p className="pointer-events-none text-lg mt-4 text-center lg:text-left">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam obcaecati
                         aliquam accusantium possimus porro amet tenetur officia, dolorum impedit
                         labore nihil dicta cupiditate! Eveniet, ipsam. Amet illum quisquam optio
