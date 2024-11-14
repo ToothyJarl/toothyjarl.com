@@ -42,10 +42,9 @@ const HomePage = () => {
 
                     <FadeIn direction="up" delay={200}>
                         <p className="pointer-events-none text-lg mt-4 text-center lg:text-left">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime
-                            laudantium, vitae dolore aut tenetur amet obcaecati eligendi earum
-                            sapiente veniam nostrum, quod, numquam doloribus beatae exercitationem
-                            temporibus fugit repellat ipsam!
+                            Hi, I'm Aidan! I'm a high school student and aspiring software developer
+                            with a focus on frontend development, building tools, and game
+                            development. I've been passionate about programming since a young age.
                         </p>
                     </FadeIn>
 
