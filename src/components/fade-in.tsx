@@ -23,6 +23,9 @@ const FadeIn: React.FC<FadeInProps> = ({
             element.style.transition = `opacity ${duration}ms ease-out ${delay}ms, transform ${duration}ms ease-out ${delay}ms`
             element.style.opacity = '1'
             element.style.transform = 'translate(0, 0)'
+
+            // Retriggers fade in on component mount
+            void element.offsetHeight
         }
     }, [duration, delay])
 
