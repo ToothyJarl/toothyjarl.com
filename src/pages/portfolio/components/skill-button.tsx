@@ -2,7 +2,6 @@ import { Button } from '@/components/ui/button'
 
 const SkillButton = ({
     icon: Icon,
-    name,
     color,
 }: {
     icon: React.ElementType
