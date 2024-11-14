@@ -6,6 +6,7 @@ import Particles from '@/components/ui/particles'
 import { Moon, Sun } from 'lucide-react'
 
 import HomePage from '@/pages/home/home'
+import PortfolioPage from '@/pages/portfolio/portfolio'
 
 function App() {
     return (
@@ -14,6 +15,7 @@ function App() {
                 <Layout>
                     <Routes>
                         <Route path="/" element={<HomePage />} />
+                        <Route path="/portfolio" element={<PortfolioPage />} />
                     </Routes>
                 </Layout>
             </Router>

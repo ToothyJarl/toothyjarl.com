@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom'
+import { Helmet } from 'react-helmet'
 import { Button } from '@/components/ui/button'
 import { Github, Mail, MoveRight, Twitter } from 'lucide-react'
 import profileImage from '@/assets/profile.jpg'
@@ -13,6 +14,9 @@ const HomePage = () => {
 
     return (
         <>
+            <Helmet>
+                <title>toothyjarl</title>
+            </Helmet>
             <div className="lg:hidden w-full flex justify-center mb-4">
                 <FadeIn direction="down" distance={20}>
                     <img
