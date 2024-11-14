@@ -6,6 +6,7 @@ type FadeInProps = {
     distance?: number
     direction?: 'up' | 'down' | 'left' | 'right'
     delay?: number
+    className?: string
 }
 
 const FadeIn: React.FC<FadeInProps> = ({
@@ -14,6 +15,7 @@ const FadeIn: React.FC<FadeInProps> = ({
     distance = 10,
     direction = 'up',
     delay = 0,
+    className = '',
 }) => {
     const ref = useRef<HTMLDivElement>(null)
 
@@ -51,6 +53,7 @@ const FadeIn: React.FC<FadeInProps> = ({
                 opacity: 0,
                 transform: getInitialTransform(),
             }}
+            className={className}
         >
             {children}
         </div>
