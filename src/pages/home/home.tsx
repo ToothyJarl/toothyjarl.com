@@ -46,8 +46,7 @@ const HomePage = () => {
                         <p className="pointer-events-none text-lg mt-4 text-center lg:text-left">
                             Hi, I'm Aidan! I'm a high school student and an aspiring software
                             developer. Currently, I'm focusing on frontend development, building
-                            tools, and game development. I've been passionate about programming
-                            since I was little.
+                            tools, and game development. I've loved programming since I was little.
                         </p>
                     </FadeIn>
 

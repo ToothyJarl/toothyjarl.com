@@ -7,12 +7,27 @@ import { Moon, MoveLeft, Sun } from 'lucide-react'
 
 import HomePage from '@/pages/home/home'
 import PortfolioPage from '@/pages/portfolio/portfolio'
-import FadeIn from './components/fade-in'
+import FadeIn from '@/components/fade-in'
+import { Helmet } from 'react-helmet'
+
+const metadata = {
+    title: 'toothyjarl',
+    description:
+        "Hi, I'm Aidan! I'm a high school student and an aspiring software developer. Currently, I'm focusing on frontend development, building tools, and game development. I've loved programming since I was little.",
+    url: 'https://toothyjarl.com/',
+}
 
 function App() {
     return (
         <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
             <Router>
+                <Helmet>
+                    <title>{metadata.title}</title>
+                    <meta name="description" content={metadata.description} />
+                    <meta property="og:title" content={metadata.title} />
+                    <meta property="og:description" content={metadata.description} />
+                    <meta property="og:url" content={metadata.url} />
+                </Helmet>
                 <Layout>
                     <Routes>
                         <Route path="/" element={<HomePage />} />
