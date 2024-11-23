@@ -13,7 +13,7 @@ import { Helmet } from 'react-helmet'
 const metadata = {
     title: 'toothyjarl',
     description:
-        "Hi, I'm Aidan! I'm a high school student and an aspiring software developer. Currently, I'm focusing on frontend development, building tools, and game development. I've loved programming since I was little.",
+        "Hi, I'm Aidan! I'm a high school student and an aspiring software developer. Currently, I'm focusing on frontend development, building tools, and game development.",
     url: 'https://toothyjarl.com/',
 }
 
