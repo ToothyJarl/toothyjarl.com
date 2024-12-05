@@ -77,8 +77,8 @@ const Particles: React.FC<ParticlesProps> = ({
     const mouse = useRef<{ x: number; y: number }>({ x: 0, y: 0 })
     const canvasSize = useRef<{ w: number; h: number }>({ w: 0, h: 0 })
     const dpr = typeof window !== 'undefined' ? window.devicePixelRatio : 1
-
     const rgb = useMemo(() => hexToRgb(color), [color])
+    const animationFrameId = useRef<number>()
 
     type Circle = {
         x: number
@@ -219,7 +219,8 @@ const Particles: React.FC<ParticlesProps> = ({
                 // update the circle position
             }
         })
-        window.requestAnimationFrame(animate)
+        
+        animationFrameId.current = window.requestAnimationFrame(animate)
     }, [clearContext, circleParams, drawCircle, ease, remapValue, staticity, vx, vy])
 
     const initCanvas = useCallback(() => {
@@ -253,8 +254,14 @@ const Particles: React.FC<ParticlesProps> = ({
                     window.removeEventListener('resize', initCanvas)
                 }
             }
+
+            return () => {
+                if (animationFrameId.current) {
+                    window.cancelAnimationFrame(animationFrameId.current)
+                }
+            }
         }
-    }, [color, refresh, initCanvas, animate])
+    }, [animate, initCanvas, color, refresh])
 
     useEffect(() => {
         onMouseMove()
