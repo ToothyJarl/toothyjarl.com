@@ -18,7 +18,7 @@ const PortfolioPage = () => {
                     <title>toothyjarl — Portfolio</title>
                 </Helmet>
 
-                <section className="w-full h-full flex flex-col items-center mb-16">
+                <section className="w-full h-full flex flex-col items-center">
                     <section className="w-full flex flex-col items-center">
                         <FadeIn direction="up">
                             <p className="pointer-events-none text-lg mt-4 text-center max-w-[40ch] mx-auto">
