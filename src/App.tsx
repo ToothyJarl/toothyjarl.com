@@ -68,7 +68,7 @@ function Layout({ children }: { children: React.ReactNode }) {
     }
 
     return (
-        <div className="font-sans antialiased min-h-screen bg-background text-foreground relative flex flex-col items-center justify-center">
+        <div className="font-sans antialiased min-h-screen h-screen bg-background text-foreground relative flex flex-col items-center justify-center pb-8">
             {children}
 
             <div className="absolute top-4 right-4 z-20">
@@ -102,7 +102,7 @@ function Layout({ children }: { children: React.ReactNode }) {
                 refresh={false}
             />
 
-            <div className="absolute bottom-2 text-[10px] text-muted-foreground">
+            <div className="absolute bottom-2 text-[10px] text-muted-foreground z-10">
                 © {new Date().getFullYear()} ToothyJarl. All rights reserved.
             </div>
         </div>

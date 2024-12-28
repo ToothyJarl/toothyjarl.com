@@ -248,20 +248,17 @@ const Particles: React.FC<ParticlesProps> = ({
             initCanvas()
             animate()
 
-            if (refresh) {
-                window.addEventListener('resize', initCanvas)
-                return () => {
-                    window.removeEventListener('resize', initCanvas)
-                }
-            }
+            // Always add resize listener
+            window.addEventListener('resize', initCanvas)
 
             return () => {
+                window.removeEventListener('resize', initCanvas)
                 if (animationFrameId.current) {
                     window.cancelAnimationFrame(animationFrameId.current)
                 }
             }
         }
-    }, [animate, initCanvas, color, refresh])
+    }, [animate, initCanvas, color])
 
     useEffect(() => {
         onMouseMove()
