@@ -1,18 +1,16 @@
-//import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 import { Button } from '@/components/ui/button'
-import { Github, Mail, /*MoveRight,*/ Twitter } from 'lucide-react'
+import { Github, Mail, MoveRight, Twitter } from 'lucide-react'
 import profileImage from '@/assets/profile.jpg'
 import FadeIn from '@/components/fade-in'
 
 const HomePage = () => {
-    /*
     const navigate = useNavigate()
 
     const handlePortfolioClick = () => {
         navigate('/portfolio')
     }
-    */
 
     return (
         <>
@@ -44,9 +42,8 @@ const HomePage = () => {
 
                     <FadeIn direction="up" delay={200}>
                         <p className="pointer-events-none text-lg mt-4 text-center lg:text-left">
-                            Hi, I'm Aidan! I'm a high school student and an aspiring software
-                            developer. Currently, I'm focusing on frontend development, building
-                            tools, and game development.
+                            👋 Hi, I'm Aidan — I'm a high school student and an aspiring software
+                            dev. Currently focusing on fullstack, game dev, and building tools.
                         </p>
                     </FadeIn>
 
@@ -78,12 +75,14 @@ const HomePage = () => {
                                     <span className="sr-only">Contact</span>
                                 </Button>
                             </a>
-                            {/* Just for now until the portfolio is implemented
-                            <Button className="group" onClick={handlePortfolioClick}>
+                            <Button
+                                className="group"
+                                onClick={handlePortfolioClick}
+                                variant="secondary"
+                            >
                                 Portfolio
                                 <MoveRight className="h-4 w-4 transform transition-transform duration-200 group-hover:translate-x-0.5" />
                             </Button>
-                            */}
                         </div>
                     </FadeIn>
                 </section>
@@ -93,7 +92,7 @@ const HomePage = () => {
                         <img
                             src={profileImage}
                             alt="Profile Image"
-                            className="w-[400px] h-[400px] object-cover rounded-full shadow-2xl"
+                            className="ease-in-out animate-sizeUpDown w-[400px] h-[400px] object-cover rounded-full shadow-2xl"
                         />
                     </FadeIn>
                 </div>

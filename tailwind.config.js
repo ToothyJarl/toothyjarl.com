@@ -54,6 +54,15 @@ export default {
             fontFamily: {
                 sans: ['Geist', 'sans-serif'],
             },
+            animation: {
+                sizeUpDown: 'sizeUpDown 10s ease-in-out infinite',
+            },
+            keyframes: {
+                sizeUpDown: {
+                    '0%, 100%': { transform: 'scale(1)' },
+                    '50%': { transform: 'scale(1.05)' },
+                },
+            },
         },
     },
     plugins: [require('tailwindcss-animate')],

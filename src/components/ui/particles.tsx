@@ -1,7 +1,7 @@
 'use client'
 
 import { cn } from '@/lib/utils'
-import React, { useEffect, useRef, useState, useMemo, useCallback } from 'react'
+import React, { useEffect, useRef, useState, useCallback } from 'react'
 
 interface MousePosition {
     x: number
@@ -77,7 +77,6 @@ const Particles: React.FC<ParticlesProps> = ({
     const mouse = useRef<{ x: number; y: number }>({ x: 0, y: 0 })
     const canvasSize = useRef<{ w: number; h: number }>({ w: 0, h: 0 })
     const dpr = typeof window !== 'undefined' ? window.devicePixelRatio : 1
-    const rgb = useMemo(() => hexToRgb(color), [color])
     const animationFrameId = useRef<number>()
 
     type Circle = {
@@ -138,7 +137,8 @@ const Particles: React.FC<ParticlesProps> = ({
                 context.current.translate(translateX, translateY)
                 context.current.beginPath()
                 context.current.arc(x, y, size, 0, 2 * Math.PI)
-                context.current.fillStyle = `rgba(${rgb.join(', ')}, ${alpha})`
+                const currentRgb = hexToRgb(color)
+                context.current.fillStyle = `rgba(${currentRgb.join(', ')}, ${alpha})`
                 context.current.fill()
                 context.current.setTransform(dpr, 0, 0, dpr, 0, 0)
 
@@ -147,7 +147,7 @@ const Particles: React.FC<ParticlesProps> = ({
                 }
             }
         },
-        [dpr, rgb]
+        [dpr, color]
     )
 
     const clearContext = useCallback(() => {
@@ -219,7 +219,7 @@ const Particles: React.FC<ParticlesProps> = ({
                 // update the circle position
             }
         })
-        
+
         animationFrameId.current = window.requestAnimationFrame(animate)
     }, [clearContext, circleParams, drawCircle, ease, remapValue, staticity, vx, vy])
 

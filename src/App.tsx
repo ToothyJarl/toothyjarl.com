@@ -13,7 +13,7 @@ import { Helmet } from 'react-helmet'
 const metadata = {
     title: 'toothyjarl',
     description:
-        "Hi, I'm Aidan! I'm a high school student and an aspiring software developer. Currently, I'm focusing on frontend development, building tools, and game development.",
+        "👋 Hi, I'm Aidan — I'm a high school student and an aspiring software developer. Currently focusing on fullstack, game development, and building tools.",
     url: 'https://toothyjarl.com/',
 }
 
@@ -96,11 +96,15 @@ function Layout({ children }: { children: React.ReactNode }) {
 
             <Particles
                 className="absolute inset-0 z-0"
-                quantity={100}
+                quantity={25}
                 ease={80}
                 color={color}
-                refresh
+                refresh={false}
             />
+
+            <div className="absolute bottom-2 text-[10px] text-muted-foreground">
+                © {new Date().getFullYear()} ToothyJarl. All rights reserved.
+            </div>
         </div>
     )
 }

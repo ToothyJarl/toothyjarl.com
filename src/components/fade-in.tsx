@@ -22,14 +22,23 @@ const FadeIn: React.FC<FadeInProps> = ({
     useEffect(() => {
         const element = ref.current
         if (element) {
-            element.style.transition = `opacity ${duration}ms ease-out ${delay}ms, transform ${duration}ms ease-out ${delay}ms`
-            element.style.opacity = '1'
-            element.style.transform = 'translate(0, 0)'
+            // Reset the initial state
+            element.style.opacity = '0'
+            element.style.transform = getInitialTransform()
 
-            // Retriggers fade in on component mount
+            // Force a reflow
             void element.offsetHeight
+
+            // Set up the transition
+            element.style.transition = `opacity ${duration}ms ease-out ${delay}ms, transform ${duration}ms ease-out ${delay}ms`
+
+            // Trigger the animation in the next frame
+            requestAnimationFrame(() => {
+                element.style.opacity = '1'
+                element.style.transform = 'translate(0, 0)'
+            })
         }
-    }, [duration, delay])
+    }, [duration, delay, direction, distance])
 
     const getInitialTransform = (): string => {
         switch (direction) {
