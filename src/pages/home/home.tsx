@@ -21,7 +21,7 @@ const HomePage = () => {
                 <div className="lg:hidden w-full flex justify-center mb-4">
                     <FadeIn direction="down" distance={20}>
                         <img
-                            src={profileImage}
+                            src={profileImage || '/placeholder.svg'}
                             alt="Profile Image"
                             className="w-[200px] h-[200px] object-cover rounded-full shadow-2xl"
                         />
@@ -48,17 +48,45 @@ const HomePage = () => {
                     </FadeIn>
 
                     <FadeIn direction="up" delay={300}>
-                        <div className="flex mt-4 space-x-4 justify-center lg:justify-start">
-                            <a
-                                href="https://github.com/ToothyJarl"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <Button variant="outline" size="icon">
-                                    <Github className="h-8 w-8" />
-                                    <span className="sr-only">GitHub</span>
-                                </Button>
-                            </a>
+                        <div className="flex flex-wrap mt-4 gap-4 items-start justify-center lg:justify-start">
+                            <div className="relative group">
+                                <a
+                                    href="https://github.com/ToothyJarl2"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-block"
+                                >
+                                    <Button variant="outline" size="icon">
+                                        <Github className="h-8 w-8" />
+                                        <span className="sr-only">GitHub</span>
+                                    </Button>
+                                </a>
+                                <div className="absolute left-[-17%] top-full mt-4 p-3 bg-secondary text-sm rounded-lg shadow-lg w-72 border border-gray-200 dark:border-0 z-10">
+                                    <div className="absolute -top-1.5 left-6 transform -translate-x-1/2 w-3 h-3 bg-secondary rotate-45 border-l border-t border-gray-200 dark:border-0"></div>
+                                    <div className="relative z-10 text-gray-800 dark:text-gray-200">
+                                        My account{' '}
+                                        <a
+                                            href="https://github.com/ToothyJarl"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-blue-600 dark:text-blue-400 hover:underline"
+                                        >
+                                            @ToothyJarl
+                                        </a>{' '}
+                                        is flagged
+                                        <br />
+                                        Currently working under{' '}
+                                        <a
+                                            href="https://github.com/ToothyJarl2"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-blue-600 dark:text-blue-400 hover:underline"
+                                        >
+                                            @ToothyJarl2
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                             <a
                                 href="https://twitter.com/ToothyJarl"
                                 target="_blank"
@@ -90,7 +118,7 @@ const HomePage = () => {
                 <div className="hidden lg:flex lg:w-1/2 justify-end items-center">
                     <FadeIn direction="left" delay={200} distance={20}>
                         <img
-                            src={profileImage}
+                            src={profileImage || '/placeholder.svg'}
                             alt="Profile Image"
                             className="ease-in-out animate-sizeUpDown w-[400px] h-[400px] object-cover rounded-full shadow-2xl"
                         />
