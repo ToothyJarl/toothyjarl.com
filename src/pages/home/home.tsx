@@ -51,7 +51,7 @@ const HomePage = () => {
                         <div className="flex flex-wrap mt-4 gap-4 items-start justify-center lg:justify-start">
                             <div className="relative group">
                                 <a
-                                    href="https://github.com/ToothyJarl2"
+                                    href="https://github.com/ToothyJarl"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="inline-block"
@@ -61,31 +61,6 @@ const HomePage = () => {
                                         <span className="sr-only">GitHub</span>
                                     </Button>
                                 </a>
-                                <div className="absolute left-[-17%] top-full mt-4 p-3 bg-secondary text-sm rounded-lg shadow-lg w-72 border border-gray-200 dark:border-0 z-10">
-                                    <div className="absolute -top-1.5 left-6 transform -translate-x-1/2 w-3 h-3 bg-secondary rotate-45 border-l border-t border-gray-200 dark:border-0"></div>
-                                    <div className="relative z-10 text-gray-800 dark:text-gray-200">
-                                        My account{' '}
-                                        <a
-                                            href="https://github.com/ToothyJarl"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="text-blue-600 dark:text-blue-400 hover:underline"
-                                        >
-                                            @ToothyJarl
-                                        </a>{' '}
-                                        is flagged
-                                        <br />
-                                        Currently working under{' '}
-                                        <a
-                                            href="https://github.com/ToothyJarl2"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="text-blue-600 dark:text-blue-400 hover:underline"
-                                        >
-                                            @ToothyJarl2
-                                        </a>
-                                    </div>
-                                </div>
                             </div>
                             <a
                                 href="https://twitter.com/ToothyJarl"
