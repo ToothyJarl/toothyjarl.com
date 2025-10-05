@@ -1,27 +1,35 @@
 import path from 'path'
-import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import Unfonts from 'unplugin-fonts/vite'
+import { defineConfig } from 'vite'
 import { fileURLToPath } from 'url'
-//import VitePluginWebpCompress from 'vite-plugin-webp-compress'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
-// https://vite.dev/config/
 export default defineConfig({
     plugins: [
         react(),
         Unfonts({
             custom: {
-                families: [{ name: 'Geist', src: './src/assets/fonts/GeistVF.woff' }],
+                families: [
+                    { name: 'Geist', src: './src/assets/fonts/GeistVF.woff' },
+                    {
+                        name: 'JetBrains Mono',
+                        local: 'JetBrains Mono',
+                        src: './src/assets/fonts/JetBrainsMono-*.woff2',
+                    },
+                ],
             },
         }),
-        //VitePluginWebpCompress(),
     ],
     resolve: {
         alias: {
             '@': path.resolve(__dirname, './src'),
         },
+    },
+    server: {
+        host: true,
+        port: 5173,
     },
 })

@@ -52,7 +52,7 @@ export default {
                 },
             },
             fontFamily: {
-                sans: ['Geist', 'sans-serif'],
+                sans: ['JetBrains Mono', 'sans-serif'],
             },
             animation: {
                 sizeUpDown: 'sizeUpDown 10s ease-in-out infinite',
