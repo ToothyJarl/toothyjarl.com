@@ -16,8 +16,7 @@ export default defineConfig({
                     { name: 'Geist', src: './src/assets/fonts/GeistVF.woff' },
                     {
                         name: 'JetBrains Mono',
-                        local: 'JetBrains Mono',
-                        src: './src/assets/fonts/JetBrainsMono-*.woff2',
+                        src: './src/assets/fonts/JetBrainsMono/JetBrainsMono-Regular.woff2',
                     },
                 ],
             },
