@@ -11,22 +11,21 @@ export default function Home() {
                 <div className="flex flex-col items-center gap-4 text-center">
                     <h1
                         className="text-5xl font-semibold tracking-tight
-                    bg-linear-to-r from-blue-400 to-blue-500 text-shadow-lg
-                    dark:from-blue-400 dark:to-green-400
+                    bg-linear-to-r text-white text-shadow-lg
                     bg-clip-text text-transparent"
                     >
                         ToothyJarl
                     </h1>
 
-                    <p className="text-md leading-8 text-zinc-600 dark:text-zinc-400">
+                    <p className="text-md leading-8 dark:text-zinc-400">
                         Aidan — 17, Software Developer.
                     </p>
                     <Image
                         width={800}
                         height={800}
-                        src="/profile.jpg"
+                        src="/profile.jpeg"
                         alt="Aidan"
-                        className="h-48 w-48 rounded-full border-2 border-zinc-300 dark:border-zinc-600 object-cover"
+                        className="h-48 w-48 rounded-full border-2 dark:border-zinc-800 object-cover opacity-70"
                     />
                     <div className="flex gap-2 items-center mt-4">
                         <Link href="https://github.com/ToothyJarl">
@@ -38,10 +37,9 @@ export default function Home() {
                         <div className="flex flex-col items-center">
                             <Link href="https://github.com/ToothyJarl2">
                                 <Button variant="ghost" size="icon" className="cursor-pointer">
-                                    <SiGithub className="text-zinc-600" />
+                                    <SiGithub className="text-zinc-400" />
                                 </Button>
                             </Link>
-                            <span className="text-xs text-zinc-600 absolute mt-10 hidden">Alt</span>
                         </div>
 
                         <Link href="https://x.com/ToothyJarl">
@@ -66,7 +64,7 @@ export default function Home() {
             </main>
 
             <div className="absolute bottom-2 text-xs text-zinc-600">
-                © 2025 ToothyJarl. All rights reserved.
+                © {new Date().getFullYear()} ToothyJarl. All rights reserved.
             </div>
         </div>
     )
