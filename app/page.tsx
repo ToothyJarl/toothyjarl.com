@@ -25,7 +25,7 @@ export default function Home() {
                         height={800}
                         src="/profile.jpeg"
                         alt="Aidan"
-                        className="h-48 w-48 rounded-full border-2 dark:border-zinc-800 object-cover opacity-70"
+                        className="h-48 w-48 rounded-full border-2 dark:border-zinc-800 object-cover"
                     />
                     <div className="flex gap-2 items-center mt-4">
                         <Link href="https://github.com/ToothyJarl">
