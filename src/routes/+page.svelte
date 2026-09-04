@@ -25,16 +25,31 @@
 	<main class="flex flex-1 flex-col justify-center px-8 py-14 md:px-16">
 		<p class="mb-8 max-w-md font-display text-2xl leading-snug sm:text-3xl">
 			I like coding stuff.
-			<span class="text-muted"> Sites, tools, frameworks — whatever interests me. </span>
+			<span class="text-muted"> Sites, tools, games. Anything that interests me. </span>
 		</p>
 
-		<ul class="mb-10 flex flex-wrap gap-x-4 gap-y-2 font-mono text-xs text-muted">
-			<li>C++</li>
-			<li class="text-line">·</li>
-			<li>TypeScript</li>
-			<li class="text-line">·</li>
-			<li>Lua</li>
-		</ul>
+		<div class="mb-10 flex max-w-md flex-col gap-4">
+			<div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+				<span class="font-mono text-[10px] text-muted/60">web</span>
+				<span class="font-mono text-xs text-ink">TypeScript</span>
+				<span class="font-mono text-xs text-ink">React</span>
+				<span class="font-mono text-xs text-ink">Svelte</span>
+				<span class="font-mono text-xs text-ink">Next.js</span>
+			</div>
+			<div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+				<span class="font-mono text-[10px] text-muted/60">systems</span>
+				<span class="font-mono text-xs text-ink">C++</span>
+			</div>
+			<div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+				<span class="font-mono text-[10px] text-muted/60">scripting</span>
+				<span class="font-mono text-xs text-ink">Lua</span>
+				<span class="font-mono text-xs text-ink">GSC</span>
+			</div>
+			<div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+				<span class="font-mono text-[10px] text-muted/60">reversing</span>
+				<span class="font-mono text-xs text-ink">IDA</span>
+			</div>
+		</div>
 
 		<a
 			href={resolve('/projects')}

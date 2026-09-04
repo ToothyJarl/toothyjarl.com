@@ -11,15 +11,13 @@
 		>
 	</header>
 	<h1 class="mb-3 font-display text-4xl font-semibold sm:text-5xl">Projects</h1>
-	<p class="mb-14 max-w-md text-lg text-muted">
-		A curated list of things I've built — sites, tools, whatever I'm into at the moment.
-	</p>
+	<p class="mb-14 max-w-md text-lg text-muted">A curated list of things I've built.</p>
 	<section class="mb-14">
 		<p class="mb-4 font-mono text-xs tracking-widest text-accent">WEBSITES</p>
 		<div class="border-t border-line">
 			<Project
 				date="Aug 2026"
-				title="ToothyJarl"
+				title="ToothyJarl.com"
 				description="The site you're looking at right now..."
 			/>
 			<Project
