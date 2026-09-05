@@ -6,6 +6,7 @@
 
 <svelte:head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta property="og:image" content="/profile.webp" />
 
 	<link rel="icon" href="/profile.webp" />
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
